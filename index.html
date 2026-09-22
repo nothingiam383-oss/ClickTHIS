@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Nisha 🎂</title>
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    background: #080014;
+    color: white;
+}
+
+
+/* =========================
+   START SCREEN
+========================= */
+
+#startScreen {
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #53157c,
+            #1a0530 45%,
+            #07000d
+        );
+
+}
+
+
+.stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        radial-gradient(
+            white 1px,
+            transparent 1px
+        ),
+
+        radial-gradient(
+            white 1px,
+            transparent 1px
+        );
+
+    background-size:
+        80px 80px,
+        130px 130px;
+
+    opacity: 0.3;
+
+    animation:
+        moveStars 15s linear infinite;
+
+}
+
+
+@keyframes moveStars {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100px);
+    }
+
+}
+
+
+.startContent {
+
+    position: relative;
+
+    z-index: 5;
+
+    padding: 25px;
+
+}
+
+
+.startContent .small {
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: #e7c5ff;
+
+    font-size: 13px;
+
+}
+
+
+.startContent h1 {
+
+    font-size:
+        clamp(45px, 9vw, 100px);
+
+    margin: 20px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #ffb8e8,
+            #d5b7ff,
+            #ffffff
+        );
+
+    background-size: 250%;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    animation:
+        shine 4s linear infinite;
+
+}
+
+
+@keyframes shine {
+
+    to {
+        background-position: 250%;
+    }
+
+}
+
+
+.startContent p {
+
+    font-size: 20px;
+
+    color: #ded1e8;
+
+}
+
+
+.clickButton {
+
+    margin-top: 30px;
+
+    padding: 18px 40px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: white;
+
+    color: #6d197d;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,0.3);
+
+    animation:
+        pulse 1.8s infinite;
+
+    transition: 0.3s;
+
+}
+
+
+.clickButton:hover {
+
+    transform:
+        scale(1.12);
+
+}
+
+
+@keyframes pulse {
+
+    0%, 100% {
+        box-shadow:
+            0 0 15px rgba(255,255,255,.2);
+    }
+
+    50% {
+        box-shadow:
+            0 0 40px rgba(255,255,255,.7);
+    }
+
+}
+
+
+/* =========================
+   SURPRISE SCREEN
+========================= */
+
+#surpriseScreen {
+
+    display: none;
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #4b145f,
+            #170522 55%,
+            #07000d
+        );
+
+}
+
+
+.surpriseContent {
+
+    position: relative;
+
+    z-index: 10;
+
+    padding:
+        80px 20px 120px;
+
+}
+
+
+.surpriseContent h1 {
+
+    font-size:
+        clamp(50px, 10vw, 110px);
+
+    margin: 20px 0;
+
+    color: #ffffff;
+
+    animation:
+        birthdayPop 1.5s ease;
+
+}
+
+
+@keyframes birthdayPop {
+
+    0% {
+
+        transform:
+            scale(0)
+            rotate(-10deg);
+
+        opacity: 0;
+
+    }
+
+    70% {
+
+        transform:
+            scale(1.15)
+            rotate(3deg);
+
+    }
+
+    100% {
+
+        transform:
+            scale(1)
+            rotate(0);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+.nishaName {
+
+    font-size:
+        clamp(40px, 8vw, 90px);
+
+    font-weight: bold;
+
+    color: #ffd1ed;
+
+    text-shadow:
+        0 0 20px #ff70c8,
+        0 0 40px #ff70c8;
+
+    animation:
+        glow 2s infinite alternate;
+
+}
+
+
+@keyframes glow {
+
+    from {
+        text-shadow:
+            0 0 10px #ff70c8;
+    }
+
+    to {
+        text-shadow:
+            0 0 35px #ff70c8,
+            0 0 70px #ff70c8;
+    }
+
+}
+
+
+.dob {
+
+    margin-top: 15px;
+
+    font-size: 18px;
+
+    color: #ddd;
+
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake {
+
+    font-size:
+        clamp(100px, 20vw, 190px);
+
+    margin-top: 25px;
+
+    animation:
+        cakeBounce 2s infinite;
+
+}
+
+
+@keyframes cakeBounce {
+
+    0%,100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px)
+            rotate(2deg);
+
+    }
+
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+
+    max-width: 750px;
+
+    margin:
+        30px auto;
+
+    font-size: 21px;
+
+    line-height: 1.7;
+
+    color: #eee;
+
+    min-height: 80px;
+
+}
+
+
+/* =========================
+   BALLOONS
+========================= */
+
+.balloon {
+
+    position: absolute;
+
+    bottom: -150px;
+
+    font-size: 70px;
+
+    animation:
+        flyBalloon linear forwards;
+
+    z-index: 3;
+
+}
+
+
+@keyframes flyBalloon {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+    }
+
+    to {
+
+        transform:
+            translateY(-120vh)
+            rotate(30deg);
+
+    }
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.moreButton {
+
+    margin-top: 25px;
+
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #ffb8e6;
+
+    color: #32102f;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.moreButton:hover {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+#finalMessage {
+
+    display: none;
+
+    margin:
+        60px auto 20px;
+
+    max-width: 700px;
+
+    padding: 35px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid rgba(255,255,255,.2);
+
+    border-radius: 25px;
+
+    backdrop-filter:
+        blur(15px);
+
+    animation:
+        fadeUp 1s ease;
+
+}
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+#finalMessage h2 {
+
+    font-size: 35px;
+
+    color: #ffd0eb;
+
+}
+
+
+#finalMessage p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #eee;
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+#confetti {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 100;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    .startContent h1 {
+
+        font-size: 55px;
+
+    }
+
+    .surpriseContent {
+
+        padding-top: 60px;
+
+    }
+
+    .surpriseContent h1 {
+
+        font-size: 55px;
+
+    }
+
+    .message {
+
+        font-size: 18px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     START SCREEN
+================================= -->
+
+<div id="startScreen">
+
+    <div class="stars"></div>
+
+
+    <div class="startContent">
+
+        <div class="small">
+
+            A Little Surprise For You ✨
+
+        </div>
+
+
+        <h1>
+
+            Hey Nisha...
+
+        </h1>
+
+
+        <p>
+
+            I made something special for your birthday. 💌
+
+        </p>
+
+
+        <button
+            class="clickButton"
+            onclick="openSurprise()">
+
+            ✨ CLICK HERE ✨
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================
+     SURPRISE
+================================= -->
+
+<div id="surpriseScreen">
+
+
+    <div class="surpriseContent">
+
+
+        <div
+            style="
+            font-size:70px;
+            animation:birthdayPop 1s ease;
+            ">
+
+            🎉 🎈 🎉
+
+        </div>
+
+
+        <h1>
+
+            HAPPY BIRTHDAY
+
+        </h1>
+
+
+        <div class="nishaName">
+
+            NISHA ❤️
+
+        </div>
+
+
+        <div class="dob">
+
+            🎂 Born on 25 September 2007
+
+        </div>
+
+
+        <div class="cake">
+
+            🎂
+
+        </div>
+
+
+        <div
+            id="message"
+            class="message">
+
+        </div>
+
+
+        <button
+            class="moreButton"
+            onclick="showMessage()">
+
+            💌 One More Surprise
+
+        </button>
+
+
+        <div id="finalMessage">
+
+            <h2>
+
+                For You, Nisha ❤️
+
+            </h2>
+
+
+            <p>
+
+                Happy Birthday! 🎉
+
+                <br><br>
+
+                I hope your special day is filled
+                with happiness, laughter, cake
+                and lots of beautiful memories.
+
+                <br><br>
+
+                May this new year of your life
+                bring you amazing moments,
+                new adventures and everything
+                you've been wishing for.
+
+                <br><br>
+
+                Keep smiling, keep shining,
+                and enjoy your day! ✨
+
+                <br><br>
+
+                🎂 HAPPY BIRTHDAY NISHA! 🎂
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- CONFETTI -->
+
+<canvas id="confetti"></canvas>
+
+
+
+<script>
+
+
+/* =================================
+   OPEN SURPRISE
+================================= */
+
+function openSurprise() {
+
+
+    document.getElementById(
+        "startScreen"
+    ).style.display = "none";
+
+
+    document.getElementById(
+        "surpriseScreen"
+    ).style.display = "block";
+
+
+    document.body.style.overflowX =
+        "hidden";
+
+
+    createBalloons();
+
+
+    createConfetti();
+
+
+    typeBirthdayMessage();
+
+
+}
+
+
+/* =================================
+   TYPING MESSAGE
+================================= */
+
+function typeBirthdayMessage() {
+
+
+    const message =
+        "Today is your day! May your smile be brighter, your happiness bigger and your year full of unforgettable memories. ❤️";
+
+
+    const element =
+        document.getElementById("message");
+
+
+    let i = 0;
+
+
+    const typing =
+        setInterval(function() {
+
+
+            element.innerHTML +=
+                message.charAt(i);
+
+
+            i++;
+
+
+            if(i >= message.length) {
+
+                clearInterval(typing);
+
+            }
+
+
+        }, 35);
+
+}
+
+
+/* =================================
+   BALLOONS
+================================= */
+
+function createBalloons() {
+
+
+    const emojis = [
+
+        "🎈",
+        "🎈",
+        "🎈",
+        "🎈",
+        "🎈",
+        "🎈",
+        "🎈",
+        "🎈"
+
+    ];
+
+
+    emojis.forEach(function(emoji, index) {
+
+
+        const balloon =
+            document.createElement("div");
+
+
+        balloon.className =
+            "balloon";
+
+
+        balloon.innerHTML =
+            emoji;
+
+
+        balloon.style.left =
+            Math.random() * 95 + "%";
+
+
+        balloon.style.animationDuration =
+            (6 + Math.random() * 7) + "s";
+
+
+        balloon.style.animationDelay =
+            Math.random() * 3 + "s";
+
+
+        document
+            .getElementById("surpriseScreen")
+            .appendChild(balloon);
+
+
+    });
+
+}
+
+
+/* =================================
+   SHOW FINAL MESSAGE
+================================= */
+
+function showMessage() {
+
+
+    document.getElementById(
+        "finalMessage"
+    ).style.display = "block";
+
+
+    createConfetti();
+
+
+    window.scrollTo({
+
+        top:
+            document.body.scrollHeight,
+
+        behavior:
+            "smooth"
+
+    });
+
+}
+
+
+/* =================================
+   CONFETTI
+================================= */
+
+const canvas =
+    document.getElementById(
+        "confetti"
+    );
+
+
+const ctx =
+    canvas.getContext("2d");
+
+
+let pieces = [];
+
+
+function resizeCanvas() {
+
+
+    canvas.width =
+        window.innerWidth;
+
+
+    canvas.height =
+        window.innerHeight;
+
+}
+
+
+window.addEventListener(
+    "resize",
+    resizeCanvas
+);
+
+
+resizeCanvas();
+
+
+function createConfetti() {
+
+
+    for(let i = 0; i < 250; i++) {
+
+
+        pieces.push({
+
+            x:
+                window.innerWidth / 2
+                +
+                (Math.random() - .5) * 500,
+
+            y:
+                window.innerHeight * .35
+                +
+                (Math.random() - .5) * 250,
+
+            vx:
+                (Math.random() - .5) * 12,
+
+            vy:
+                (Math.random() - .5) * 12 - 3,
+
+            size:
+                Math.random() * 8 + 3,
+
+            life:
+                100 + Math.random() * 120,
+
+            rotation:
+                Math.random() * 6
+
+        });
+
+    }
+
+}
+
+
+function animateConfetti() {
+
+
+    ctx.clearRect(
+
+        0,
+        0,
+        canvas.width,
+        canvas.height
+
+    );
+
+
+    pieces =
+        pieces.filter(
+            p => p.life > 0
+        );
+
+
+    pieces.forEach(function(p) {
+
+
+        p.x += p.vx;
+
+        p.y += p.vy;
+
+        p.vy += .08;
+
+        p.life--;
+
+        p.rotation += .1;
+
+
+        ctx.save();
+
+
+        ctx.translate(
+            p.x,
+            p.y
+        );
+
+
+        ctx.rotate(
+            p.rotation
+        );
+
+
+        ctx.fillStyle =
+            `hsl(
+                ${Math.random() * 360},
+                90%,
+                65%
+            )`;
+
+
+        ctx.fillRect(
+
+            -p.size / 2,
+            -p.size / 2,
+            p.size,
+            p.size
+
+        );
+
+
+        ctx.restore();
+
+
+    });
+
+
+    requestAnimationFrame(
+        animateConfetti
+    );
+
+}
+
+
+animateConfetti();
+
+
+</script>
+
+
+</body>
+</html>
